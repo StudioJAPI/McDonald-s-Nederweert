@@ -302,48 +302,48 @@ section{position:relative}
 .plans-head{text-align:center;margin:0 auto 34px;max-width:760px}
 .plans-head .h2{margin-inline:auto;max-width:16ch}
 .plans-head .lead{margin:20px auto 0}
-.plans{display:grid;grid-template-columns:1fr 1.14fr 1fr;grid-template-rows:repeat(22,auto);column-gap:20px;row-gap:0;align-items:stretch;padding-top:26px}
-.plan{position:relative;grid-row:span 22;display:grid;grid-template-rows:subgrid;row-gap:0;border-radius:var(--r-xl);background:var(--surface);border:1.5px solid var(--line);padding:34px 30px 32px;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.plans{display:grid;grid-template-columns:1fr 1.14fr 1fr;grid-template-rows:repeat(10,auto);column-gap:22px;row-gap:0;align-items:stretch;padding-top:26px}
+.plan{position:relative;grid-row:span 10;display:grid;grid-template-rows:subgrid;row-gap:0;border-radius:var(--r-xl);background:var(--surface);border:1.5px solid var(--line);padding:36px 32px 32px;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
 .plan:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.plan-name{align-self:end;font-size:1.25rem;font-family:var(--display);font-variation-settings:"wdth" 118;font-weight:800;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;line-height:1.1}
-.plan-name small{font-family:var(--body);font-weight:600;font-size:.8rem;color:var(--ink-soft)}
-.plan-level{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:var(--r-md);background:var(--bg-alt)}
+.plan-head{align-self:end;display:flex;flex-direction:column;gap:6px}
+.plan-num{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);opacity:.8}
+.plan-name{font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:900;font-size:clamp(2.1rem,3vw,2.8rem);line-height:.95;letter-spacing:-.035em}
+.plan-level{margin-top:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:var(--r-md);background:var(--bg-alt)}
 .plan-level .lv{display:flex;flex-direction:column;gap:2px;min-width:0}
-.plan-level .lv small{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
-.plan-level .lv b{font-family:var(--display);font-variation-settings:"wdth" 110;font-weight:800;font-size:1.3rem;line-height:1.05}
+.plan-level .lv small{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.plan-level .lv b{font-family:var(--display);font-variation-settings:"wdth" 110;font-weight:800;font-size:1.25rem;line-height:1.05}
 .meter{display:flex;align-items:flex-end;gap:4px;height:26px;flex:none}
 .meter i{width:6px;border-radius:3px;background:var(--line);position:relative;overflow:hidden}
 .meter i:nth-child(1){height:30%}.meter i:nth-child(2){height:44%}.meter i:nth-child(3){height:58%}.meter i:nth-child(4){height:72%}.meter i:nth-child(5){height:86%}.meter i:nth-child(6){height:100%}
 .meter i.on::after{content:"";position:absolute;inset:0;background:var(--red);transform:scaleY(0);transform-origin:bottom;transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
-.plans.in .meter i.on::after{transform:none}
+.plans.in .meter i.on::after,.dlg .meter i.on::after{transform:none}
 .meter i:nth-child(2)::after{transition-delay:.08s}.meter i:nth-child(3)::after{transition-delay:.16s}.meter i:nth-child(4)::after{transition-delay:.24s}.meter i:nth-child(5)::after{transition-delay:.32s}.meter i:nth-child(6)::after{transition-delay:.4s}
 .plan-levelline{margin-top:10px;font-size:.9rem;line-height:1.45;color:var(--ink-soft)}
-.plan-lead{margin-top:14px;font-weight:600;line-height:1.45}
-.freq{margin:18px 0 6px;padding:13px 16px;border-radius:var(--r-md);background:var(--bg-alt);display:flex;align-items:center;justify-content:space-between;gap:12px}
-.freq b{font-size:.95rem;white-space:nowrap}
+.freq{margin:18px 0 4px;padding:14px 16px;border-radius:var(--r-md);background:var(--bg-alt);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.freq b{font-family:var(--display);font-variation-settings:"wdth" 104;font-weight:800;font-size:1.05rem;white-space:nowrap}
 .freq .vids{display:flex;gap:3px;flex-wrap:nowrap;justify-content:flex-end}
 .freq .vids i{flex:none;width:6px;height:16px;border-radius:3px;background:var(--red);transform:scaleY(0);transform-origin:bottom;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
 .plans.in .freq .vids i{transform:none}
-.plan-list{grid-row:span 14;display:grid;grid-template-rows:subgrid;row-gap:0;list-style:none;margin:14px 0 0;padding:0}
-.plan-list li{display:flex;gap:10px;align-items:flex-start;font-size:.96rem;line-height:1.4;padding:6px 8px;margin:0 -8px;border-radius:10px;transition:background .25s}
+.plan-list{grid-row:span 3;display:grid;grid-template-rows:subgrid;row-gap:0;list-style:none;margin:10px 0 0;padding:0}
+.plan-list li{display:flex;gap:10px;align-items:flex-start;font-size:.97rem;line-height:1.4;padding:7px 0}
 .plan-list li::before{content:"";flex:none;width:20px;height:20px;margin-top:1px;border-radius:50%;background:var(--yellow-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.6L14 7.6' fill='none' stroke='%23DA291C' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
-.plan-list li.none::before{background:none;width:20px}
-.plan-list li.none::after{content:"";align-self:center;width:14px;height:2px;border-radius:2px;background:var(--line);margin-left:-26px;margin-right:12px}
-.plan-list li.hl{background:var(--yellow-soft)}
-.plan-note{margin-top:18px;padding-top:16px;border-top:1.5px dashed var(--line);font-size:.92rem;color:var(--ink-soft)}
-.plan-note:empty{border:0;padding:0}
-.plan-price{align-self:end;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px;margin-top:22px;font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:900;letter-spacing:-.04em}
+.plan-list li.empty{padding:0}.plan-list li.empty::before{display:none}
+.plan-all{margin-top:12px;padding:14px 16px;border-radius:var(--r-md);border:1.5px dashed var(--line);font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
+.plan-all b{display:block;color:var(--ink);font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px}
+.plan-price{align-self:end;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px;margin-top:24px;font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:900;letter-spacing:-.04em}
 .plan-price .cur{font-size:1.7rem}
 .plan-price .amt{font-size:clamp(2.8rem,4.2vw,3.8rem);line-height:1}
 .plan-price .per{flex-basis:100%;font-family:var(--body);font-weight:600;font-size:.85rem;letter-spacing:0;color:var(--ink-soft);margin-top:6px}
 .plan .btn{margin-top:20px;justify-content:center;min-height:52px;align-self:end}
 /* Aanbevolen pakket */
-.plan--groei{background:var(--red);color:#fff;border:0;padding:44px 34px 36px;transform:scale(1.035);box-shadow:0 40px 80px -30px rgba(218,41,28,.65),0 0 0 6px color-mix(in srgb,var(--yellow) 60%,transparent);z-index:2}
+.plan--groei{background:var(--red);color:#fff;border:0;padding:46px 36px 34px;transform:scale(1.035);box-shadow:0 40px 80px -30px rgba(218,41,28,.65),0 0 0 6px color-mix(in srgb,var(--yellow) 60%,transparent);z-index:2}
 .plan--groei:hover{transform:scale(1.035) translateY(-6px);box-shadow:0 50px 90px -30px rgba(218,41,28,.7),0 0 0 6px var(--yellow)}
 .plan--groei::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.16) 50%,transparent 70%);background-size:250% 100%;animation:sheen 5s ease-in-out infinite;pointer-events:none}
 @keyframes sheen{0%,60%{background-position:120% 0}100%{background-position:-120% 0}}
-.plan--groei .plan-name{font-size:1.55rem}
-.plan--groei .plan-name small,.plan--groei .plan-price .per,.plan--groei .plan-levelline{color:rgba(255,255,255,.85)}
+.plan--groei .plan-name{font-size:clamp(2.5rem,3.6vw,3.3rem)}
+.plan--groei .plan-num,.plan--groei .plan-price .per,.plan--groei .plan-levelline,.plan--groei .plan-all{color:rgba(255,255,255,.85)}
+.plan--groei .plan-all{border-color:rgba(255,255,255,.35)}
+.plan--groei .plan-all b{color:#fff}
 .plan--groei .plan-level,.plan--groei .freq{background:rgba(0,0,0,.18)}
 .plan--groei .plan-level .lv small{color:rgba(255,255,255,.75)}
 .plan--groei .plan-level .lv b{color:var(--yellow)}
@@ -351,42 +351,113 @@ section{position:relative}
 .plan--groei .meter i.on::after{background:var(--yellow)}
 .plan--groei .freq .vids i{background:var(--yellow)}
 .plan--groei .plan-list li::before{background-color:var(--yellow)}
-.plan--groei .plan-list li.none::before{background:none}
-.plan--groei .plan-list li.none::after{background:rgba(255,255,255,.3)}
-.plan--groei .plan-list li.hl{background:rgba(255,255,255,.14)}
 .plan--groei .plan-price .amt{font-size:clamp(3.6rem,5.6vw,5rem);color:#fff}
 .plan--groei .plan-price .cur{font-size:2.2rem;color:var(--yellow)}
 .plan-badge{position:absolute;top:-22px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:11px 20px 11px 12px;border-radius:999px;background:var(--yellow);color:#1A1A1A;font-weight:800;font-size:.92rem;box-shadow:0 12px 24px -10px rgba(0,0,0,.45);display:flex;align-items:center;gap:9px;animation:badge 3.6s ease-in-out infinite}
 .plan-badge::before{content:"";flex:none;width:24px;height:24px;border-radius:50%;background:var(--red) var(--mcd-logo) center/14px auto no-repeat}
 @keyframes badge{0%,100%{box-shadow:0 12px 24px -10px rgba(0,0,0,.45),0 0 0 0 rgba(255,199,44,.55)}50%{box-shadow:0 12px 24px -10px rgba(0,0,0,.45),0 0 0 8px rgba(255,199,44,0)}}
 .plan-tabs{display:none}
-@media (max-width:1180px){.plans{column-gap:14px}.plan{padding:30px 22px 28px}.plan--groei{padding:42px 26px 32px}.plan-badge{font-size:.82rem}}
+.cmp-open{display:flex;justify-content:center;margin-top:44px}
+.cmp-open .btn{padding:17px 28px;min-height:56px;font-size:1.02rem}
+.cmp-open .btn svg{width:20px;height:20px}
+@media (max-width:1180px){.plans{column-gap:14px}.plan{padding:32px 22px 28px}.plan--groei{padding:44px 26px 30px}.plan-badge{font-size:.82rem}}
 
-/* Pakketten mobiel/tablet: swipebare kaarten met tabs */
+/* Pakketten mobiel/tablet */
 @media (max-width:1000px){
-  .plan-tabs{display:flex;gap:6px;padding:5px;border-radius:999px;background:var(--bg-alt);max-width:460px;margin:0 auto 6px;position:relative}
-  .plan-tabs button{flex:1;min-height:46px;border:0;border-radius:999px;background:transparent;font:inherit;font-weight:700;font-size:.95rem;color:var(--ink-soft);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;transition:background .3s,color .3s}
+  .plan-tabs{display:flex;gap:6px;padding:5px;border-radius:999px;background:var(--bg-alt);max-width:460px;margin:0 auto 6px}
+  .plan-tabs button{flex:1;min-height:48px;border:0;border-radius:999px;background:transparent;font:inherit;font-weight:700;font-size:.95rem;color:var(--ink-soft);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;transition:background .3s,color .3s}
   .plan-tabs button small{font-weight:600;font-size:.7rem;opacity:.8}
   .plan-tabs button[aria-selected="true"]{background:var(--red);color:#fff}
-  .plans{display:flex;grid-template-rows:none;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;gap:14px;margin:0 -20px;padding:18px 20px 26px;scroll-padding-inline:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .plans{display:flex;grid-template-rows:none;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;gap:14px;margin:0 -20px;padding:18px 20px 22px;scroll-padding-inline:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .plans::-webkit-scrollbar{display:none}
-  .plan{flex:0 0 min(86%,440px);scroll-snap-align:center;display:flex;flex-direction:column;grid-row:auto;padding:28px 22px 24px}
+  .plan{flex:0 0 min(86%,440px);scroll-snap-align:center;display:flex;flex-direction:column;grid-row:auto;padding:26px 22px 24px}
   .plan:hover,.plan--groei:hover{transform:none}
-  .plan--groei{transform:none;padding:22px 22px 26px;box-shadow:0 24px 50px -24px rgba(218,41,28,.6),0 0 0 4px color-mix(in srgb,var(--yellow) 60%,transparent)}
-  .plan-badge{position:static;transform:none;order:0;align-self:flex-start;margin:0 0 16px;font-size:.82rem;padding:8px 14px 8px 8px;max-width:100%;white-space:normal;text-align:left;line-height:1.25}
+  .plan--groei{transform:none;padding:22px 22px 24px;box-shadow:0 24px 50px -24px rgba(218,41,28,.6),0 0 0 4px color-mix(in srgb,var(--yellow) 60%,transparent)}
+  .plan-badge{position:static;transform:none;align-self:flex-start;margin:0 0 16px;font-size:.82rem;padding:8px 14px 8px 8px;max-width:100%;white-space:normal;text-align:left;line-height:1.25}
   .plan-badge::before{width:20px;height:20px;background-size:12px auto}
-  .plan-name,.plan-price{align-self:auto}
-  .plan-name{order:1}.plan-level{order:2}.plan-levelline{order:3}.plan-price{order:4;margin-top:16px}.plan-lead{order:5}.freq{order:6}.plan-list{order:7;display:flex;flex-direction:column;gap:2px}.plan-note{order:8}.plan .btn{order:9;margin-top:auto}
-  .plan .btn{margin-top:22px}
-  .plan-note{margin-bottom:0}
-  .plan-list li.none{display:none}
+  .plan-head,.plan-price{align-self:auto}
+  .plan-name{font-size:2.3rem}
+  .plan--groei .plan-name{font-size:2.6rem}
+  .plan-list{display:flex;flex-direction:column}
+  .plan-list li{padding:5px 0}
+  .plan .btn{margin-top:18px}
+  .plan-price{margin-top:auto;padding-top:20px}
   .plan-price .amt{font-size:3rem}
-  .plan--groei .plan-price .amt{font-size:3.5rem}
+  .plan--groei .plan-price .amt{font-size:3.4rem}
   .plan--groei .plan-price .cur{font-size:1.9rem}
-  .plan-swipe{display:block;text-align:center;font-size:.85rem;color:var(--ink-soft);margin-top:-8px}
+  .plan-swipe{display:block;text-align:center;font-size:.85rem;color:var(--ink-soft);margin-top:-6px}
+  .cmp-open{margin-top:22px}
+  .cmp-open .btn{width:100%;max-width:460px;justify-content:center}
 }
 @media (min-width:1001px){.plan-swipe{display:none}}
-@media (max-width:360px){.plan{flex-basis:88%;padding:26px 18px 22px}.plan-level .lv b{font-size:1.15rem}.freq{padding:12px}.freq b{font-size:.88rem}.plan-price .amt{font-size:2.6rem}.plan--groei .plan-price .amt{font-size:3rem}}
+@media (max-width:360px){.plan{flex-basis:88%;padding:24px 18px 22px}.plan-name{font-size:2rem}.plan--groei .plan-name{font-size:2.2rem}.plan-level .lv b{font-size:1.12rem}.freq{padding:12px}.freq b{font-size:.95rem}.plan-price .amt{font-size:2.6rem}.plan--groei .plan-price .amt{font-size:3rem}}
+
+/* Vergelijkingsvenster */
+.dlg{border:0;padding:0;background:transparent;color:var(--ink);width:min(1080px,calc(100vw - 48px));max-width:none;max-height:min(88vh,900px);overflow:visible}
+.dlg::backdrop{background:rgba(20,10,5,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.dlg[open]{animation:dlgIn .45s cubic-bezier(.16,1,.3,1)}
+.dlg[open]::backdrop{animation:fadeIn .3s ease}
+@keyframes dlgIn{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.dlg-in{background:var(--surface);border-radius:var(--r-xl);box-shadow:0 40px 100px -30px rgba(0,0,0,.5);max-height:min(88vh,900px);overflow:auto;overscroll-behavior:contain;display:flex;flex-direction:column}
+.dlg-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:30px 34px 18px}
+.dlg-top h3{font-size:clamp(1.6rem,3vw,2.3rem)}
+.dlg-top p{margin-top:8px;color:var(--ink-soft);max-width:60ch;font-size:.98rem}
+.dlg-x{flex:none;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .25s,color .25s,transform .25s}
+.dlg-x:hover{background:var(--red);color:#fff;border-color:var(--red);transform:rotate(90deg)}
+.dlg-x svg{width:20px;height:20px}
+.dt{display:grid;grid-template-columns:1.1fr repeat(3,1fr);margin:0 34px;border-radius:var(--r-lg);border:1.5px solid var(--line);overflow:hidden}
+.dt>div{padding:15px 18px;border-top:1.5px solid var(--line);font-size:.95rem;line-height:1.4;display:flex;align-items:center}
+.dt>.h{border-top:0;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:8px;padding-top:20px;padding-bottom:18px}
+.dt>.h b{font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:900;font-size:1.45rem;line-height:1;letter-spacing:-.03em}
+.dt>.h .lvl{display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;color:var(--ink-soft)}
+.dt>.h .meter{height:18px;gap:3px}.dt>.h .meter i{width:4px}
+.dt>.lab{font-weight:700;color:var(--ink);background:var(--bg-alt)}
+.dt>.g{background:color-mix(in srgb,var(--red) 8%,var(--surface))}
+.dt>.h.g{background:var(--red);color:#fff}
+.dt>.h.g .lvl{color:rgba(255,255,255,.85)}
+.dt>.h.g .meter i{background:rgba(255,255,255,.3)}.dt>.h.g .meter i.on::after{background:var(--yellow)}
+.dt .tag{display:inline-block;background:var(--yellow);color:#1A1A1A;font-size:.7rem;font-weight:800;padding:3px 9px;border-radius:999px;letter-spacing:.02em}
+.dt .num{font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:900;font-size:1.6rem;letter-spacing:-.03em;line-height:1}
+.dt .no{color:var(--ink-soft);opacity:.55;font-weight:700}
+.dt .fit{display:block}
+.dt .fit small{display:block;margin-top:6px;color:var(--ink-soft);font-size:.85rem}
+.dt>.ctacell{padding:16px 18px 18px}
+.dt>.ctacell .btn{width:100%;justify-content:center;padding:13px 16px;font-size:.92rem;min-height:48px}
+.dt>.ctacell.lab{background:var(--bg-alt)}
+.dm{display:none}
+.dlg-in>*{flex:none}
+.dlg-all{margin:22px 34px 32px;padding:20px 22px;border-radius:var(--r-lg);background:var(--yellow-soft)}
+.dlg-all p{font-weight:700;margin-bottom:12px}
+.dlg-all p small{display:block;font-weight:500;color:var(--ink-soft);font-size:.88rem;margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:7px 13px;border-radius:999px;background:var(--surface);font-weight:600;font-size:.88rem;border:1.5px solid color-mix(in srgb,var(--yellow) 60%,transparent)}
+html.dlg-lock,html.dlg-lock body{overflow:hidden}
+@media (max-width:760px){
+  .dlg{width:100vw;height:100vh;height:100dvh;max-height:none;margin:0;inset:0}
+  .dlg[open]{animation:sheetIn .45s cubic-bezier(.16,1,.3,1)}
+  @keyframes sheetIn{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+  .dlg-in{height:100%;max-height:none;border-radius:0;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  .dlg-top{padding:20px 20px 14px;border-bottom:1.5px solid var(--line)}
+  .dlg-top h3{font-size:1.55rem}
+  .dlg-top p{font-size:.92rem}
+  .dt{display:none}
+  .dm{display:flex;flex-direction:column;gap:12px;padding:16px 16px 0}
+  .dm-row{border:1.5px solid var(--line);border-radius:var(--r-md);overflow:hidden}
+  .dm-row>b{display:block;padding:12px 16px;background:var(--bg-alt);font-size:.95rem}
+  .dm-row .it{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:12px 16px;border-top:1.5px solid var(--line);font-size:.95rem;line-height:1.4}
+  .dm-row .it .pk{font-weight:800;font-size:.9rem}
+  .dm-row .it .pk small{display:block;font-weight:600;font-size:.72rem;color:var(--ink-soft)}
+  .dm-row .it.g{background:color-mix(in srgb,var(--red) 9%,var(--surface))}
+  .dm-row .it.g .pk{color:var(--red)}
+  .dm-row .num{font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:900;font-size:1.35rem;line-height:1}
+  .dm-row .no{color:var(--ink-soft);opacity:.55;font-weight:700}
+  .dm-row .fit small{display:block;margin-top:4px;color:var(--ink-soft);font-size:.84rem}
+  .dm-cta{display:flex;flex-direction:column;gap:10px;padding:4px 0 0}
+  .dm-cta .btn{width:100%;justify-content:center;min-height:52px}
+  .dlg-all{margin:16px}
+}
+@media (max-width:360px){.dm-row .it{grid-template-columns:82px 1fr;gap:10px;padding:11px 12px}}
 
 /* Advies */
 .advies{margin-top:clamp(70px,9vw,120px);display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -858,7 +929,7 @@ section{position:relative}
     <div class="plans-head">
       <p class="kicker rv">Pakketten</p>
       <h2 class="h2 rv" data-d="1">Drie manieren om te bouwen.</h2>
-      <p class="lead rv" data-d="2">Elk pakket bevat het volledige proces, van idee tot publicatie. Het verschil zit in frequentie, ruimte voor formats en de mate waarin we recruitment en Darwins LinkedIn meenemen.</p>
+      <p class="lead rv" data-d="2">Elk pakket bevat het volledige proces, van idee tot publicatie, en alle contentsoorten. Het verschil zit vooral in de hoeveelheid content, en daarmee in hoe zichtbaar McDonald's Nederweert is.</p>
     </div>
     <div class="plan-tabs" role="tablist" aria-label="Kies een pakket">
       <button type="button" role="tab" data-tab="basis" aria-selected="false">Basis<small>Aanwezig</small></button>
@@ -869,28 +940,16 @@ section{position:relative}
     <div class="plans rv" id="plans">
       <!-- PAKKET 1 -->
       <article class="plan" id="plan-basis" aria-label="Pakket 1, Basis">
-        <p class="plan-name">Basis <small>Pakket 1</small></p>
+        <div class="plan-head"><span class="plan-num">Pakket 1</span><h3 class="plan-name">Basis</h3></div>
         <div class="plan-level"><span class="lv"><small>Zichtbaarheid</small><b>Aanwezig</b></span><span class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span></div>
         <p class="plan-levelline">Een goede basis om structureel aanwezig te zijn op social media.</p>
-        <p class="plan-lead">Voor een sterke en consistente basis op social media.</p>
         <div class="freq"><b>4 video's per maand</b><span class="vids" data-vids="4"></span></div>
         <ul class="plan-list">
-          <li data-row="0">4 short-form video's per maand</li>
-          <li data-row="1">4 visuals per maand</li>
-          <li data-row="2">1 contentmoment op locatie</li>
-          <li data-row="3">TikTok en Instagram</li>
-          <li data-row="4">Contentplanning</li>
-          <li data-row="5">Trend- en formatideeën</li>
-          <li data-row="6">Filmen en montage</li>
-          <li data-row="7">Captions</li>
-          <li data-row="8">Inplannen en publiceren</li>
-          <li class="none" data-row="9" aria-hidden="true"></li>
-          <li class="none" data-row="10" aria-hidden="true"></li>
-          <li class="none" data-row="11" aria-hidden="true"></li>
-          <li class="none" data-row="12" aria-hidden="true"></li>
-          <li data-row="13">Maandelijkse afstemming</li>
+          <li>1 visual per maand</li>
+          <li>1 contentmoment op locatie</li>
+          <li class="empty" aria-hidden="true"></li>
         </ul>
-        <p class="plan-note">Gemiddeld verschijnt er iedere week een nieuwe video en visual. Geschikt wanneer McDonald's Nederweert social media eerst op een toegankelijke manier wil opbouwen.</p>
+        <p class="plan-all"><b>In elk pakket</b>Filmen, montage, captions, contentplanning en publiceren op TikTok en Instagram. Alle contentsoorten mogelijk, zoals trends en formats, recruitment en employer branding.</p>
         <p class="plan-price"><span class="cur">€</span><span class="amt" data-price="basis">999</span><span class="per">p/m excl. btw</span></p>
         <a class="btn btn--ghost" href="#" data-cta="basis">Bespreek Basis</a>
       </article>
@@ -898,61 +957,38 @@ section{position:relative}
       <!-- PAKKET 2 (ADVIES) -->
       <article class="plan plan--groei" id="plan-groei" aria-label="Pakket 2, Groei">
         <span class="plan-badge">Aanbevolen voor McDonald's Nederweert</span>
-        <p class="plan-name">Groei <small>Pakket 2</small></p>
+        <div class="plan-head"><span class="plan-num">Pakket 2</span><h3 class="plan-name">Groei</h3></div>
         <div class="plan-level"><span class="lv"><small>Zichtbaarheid</small><b>Opvallend</b></span><span class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></div>
         <p class="plan-levelline">Een actievere aanwezigheid met meer zichtbaarheid en continuïteit.</p>
-        <p class="plan-lead">Genoeg ritme om serieus te bouwen aan bereik, recruitment en employer branding.</p>
         <div class="freq"><b>8 video's per maand</b><span class="vids" data-vids="8"></span></div>
         <ul class="plan-list">
-          <li data-row="0">8 short-form video's per maand</li>
-          <li data-row="1">4 visuals per maand</li>
-          <li data-row="2">1 contentmoment op locatie</li>
-          <li data-row="3">TikTok en Instagram</li>
-          <li data-row="4">Contentplanning</li>
-          <li data-row="5">Actieve trend- en formatontwikkeling</li>
-          <li data-row="6">Filmen en montage</li>
-          <li data-row="7">Captions</li>
-          <li data-row="8">Inplannen en publiceren</li>
-          <li data-row="9">Content rondom vacatures</li>
-          <li data-row="10">Employer-brandingcontent</li>
-          <li data-row="11">4 persoonlijke LinkedIn-posts voor Darwin</li>
-          <li class="none" data-row="12" aria-hidden="true"></li>
-          <li data-row="13">Maandelijkse evaluatie en optimalisatie</li>
+          <li>4 visuals per maand</li>
+          <li>1 contentmoment op locatie</li>
+          <li>4 persoonlijke LinkedIn-posts voor Darwin</li>
         </ul>
-        <p class="plan-note"></p>
+        <p class="plan-all"><b>In elk pakket</b>Filmen, montage, captions, contentplanning en publiceren op TikTok en Instagram. Alle contentsoorten mogelijk, zoals trends en formats, recruitment en employer branding.</p>
         <p class="plan-price"><span class="cur">€</span><span class="amt" data-price="groei">1.599</span><span class="per">p/m excl. btw</span></p>
         <a class="btn btn--yellow" href="#" data-cta="groei">Start met Pakket Groei</a>
       </article>
 
       <!-- PAKKET 3 -->
       <article class="plan" id="plan-max" aria-label="Pakket 3, Maximale zichtbaarheid">
-        <p class="plan-name">Maximale zichtbaarheid <small>Pakket 3</small></p>
+        <div class="plan-head"><span class="plan-num">Pakket 3</span><h3 class="plan-name">Maximale zichtbaarheid</h3></div>
         <div class="plan-level"><span class="lv"><small>Zichtbaarheid</small><b>Onmisbaar</b></span><span class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
         <p class="plan-levelline">De meest intensieve aanwezigheid binnen dit voorstel.</p>
-        <p class="plan-lead">Voor wanneer je echt maximaal wilt inzetten op lokale zichtbaarheid.</p>
         <div class="freq"><b>12 video's per maand</b><span class="vids" data-vids="12"></span></div>
         <ul class="plan-list">
-          <li data-row="0">12 short-form video's per maand</li>
-          <li data-row="1">4 visuals per maand</li>
-          <li data-row="2">1 uitgebreid contentmoment op locatie</li>
-          <li data-row="3">TikTok en Instagram</li>
-          <li data-row="4">Contentplanning</li>
-          <li data-row="5">Uitgebreide trend- en conceptontwikkeling</li>
-          <li data-row="6">Filmen en montage</li>
-          <li data-row="7">Captions</li>
-          <li data-row="8">Inplannen en publiceren</li>
-          <li data-row="9">Recruitmentcontent</li>
-          <li data-row="10">Employer-brandingcontent</li>
-          <li data-row="11">4 persoonlijke LinkedIn-posts voor Darwin</li>
-          <li data-row="12">Meer ruimte voor verschillende formats en medewerkers</li>
-          <li data-row="13">Maandelijkse analyse en optimalisatie</li>
+          <li>4 visuals per maand</li>
+          <li>1 uitgebreid contentmoment op locatie</li>
+          <li>4 persoonlijke LinkedIn-posts voor Darwin</li>
         </ul>
-        <p class="plan-note">Vooral geschikt wanneer McDonald's Nederweert veel verschillende formats wil testen en elke week meerdere keren zichtbaar wil zijn.</p>
+        <p class="plan-all"><b>In elk pakket</b>Filmen, montage, captions, contentplanning en publiceren op TikTok en Instagram. Alle contentsoorten mogelijk, zoals trends en formats, recruitment en employer branding.</p>
         <p class="plan-price"><span class="cur">€</span><span class="amt" data-price="max">2.399</span><span class="per">p/m excl. btw</span></p>
         <a class="btn btn--ghost" href="#" data-cta="max">Bespreek Maximaal</a>
       </article>
     </div>
-    <p class="plan-swipe">Swipe om de pakketten te vergelijken</p>
+    <p class="plan-swipe">Swipe om de pakketten te bekijken</p>
+    <div class="cmp-open"><button class="btn" type="button" data-open-cmp aria-haspopup="dialog" aria-controls="cmpDialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16M9 4v16M15 4v16"/></svg>Bekijk de verschillen</button></div>
 
     <!-- ADVIES -->
     <div class="advies" id="advies">
@@ -1110,6 +1146,21 @@ section{position:relative}
   </div>
 </section>
 </main>
+
+<dialog class="dlg" id="cmpDialog" aria-labelledby="dlgTitle">
+  <div class="dlg-in">
+    <div class="dlg-top">
+      <div><h3 id="dlgTitle">De verschillen tussen de pakketten</h3><p>Alle drie de pakketten bevatten het volledige proces en alle contentsoorten. Het verschil zit vooral in de hoeveelheid content, en daarmee in hoe zichtbaar McDonald's Nederweert is.</p></div>
+      <button class="dlg-x" type="button" data-close-cmp aria-label="Vergelijking sluiten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="dt" id="cmpTable"></div>
+    <div class="dm" id="cmpMobile"></div>
+    <div class="dlg-all">
+      <p>In elk pakket inbegrepen<small>Dit is in alle drie de pakketten hetzelfde.</small></p>
+      <div class="chips"><span>TikTok en Instagram</span><span>Contentplanning</span><span>Filmen en montage</span><span>Captions</span><span>Inplannen en publiceren</span><span>Trend- en formatcontent</span><span>Recruitmentcontent</span><span>Employer-brandingcontent</span></div>
+    </div>
+  </div>
+</dialog>
 
 <footer class="foot" id="footer">
   <div class="wrap">
@@ -1279,12 +1330,8 @@ const CONFIG = {
     el.innerHTML = Array.from({length:n}, (_,i) => `<i style="transition-delay:${.2 + i*.05}s"></i>`).join('');
   });
 
-  // Pakketten: rij-highlight (desktop) en tabs/swipe (mobiel)
+  // Pakketten: tabs/swipe (mobiel)
   const plansBox = d.getElementById('plans');
-  plansBox.querySelectorAll('.plan-list li:not(.none)').forEach(li => {
-    li.addEventListener('mouseenter', () => plansBox.querySelectorAll(`li[data-row="${li.dataset.row}"]`).forEach(x => x.classList.add('hl')));
-    li.addEventListener('mouseleave', () => plansBox.querySelectorAll('li.hl').forEach(x => x.classList.remove('hl')));
-  });
   const tabs = [...d.querySelectorAll('[data-tab]')];
   const cards = { basis: d.getElementById('plan-basis'), groei: d.getElementById('plan-groei'), max: d.getElementById('plan-max') };
   const isCarousel = () => getComputedStyle(plansBox).display === 'flex';
@@ -1304,6 +1351,64 @@ const CONFIG = {
   let lastW = innerWidth;
   addEventListener('resize', () => { if (innerWidth !== lastW) { lastW = innerWidth; centerCard('groei', false); } });
 
+  // Vergelijking: alleen de echte verschillen tussen de pakketten
+  const P = CONFIG.prijzen;
+  const PK = [
+    { key:'basis', name:'Basis',                  level:'Aanwezig',  n:2 },
+    { key:'groei', name:'Groei',                  level:'Opvallend', n:4 },
+    { key:'max',   name:'Maximale zichtbaarheid', level:'Onmisbaar', n:6 }
+  ];
+  const DIFFS = [
+    { label:"Short-form video's per maand", v:[4,8,12], num:true },
+    { label:'Visuals per maand', v:[1,4,4], num:true },
+    { label:'Contentmoment op locatie', v:['1 contentmoment','1 contentmoment','1 uitgebreid contentmoment'] },
+    { label:'Trend- en formatontwikkeling', v:['Trend- en formatideeën','Actieve trend- en formatontwikkeling','Uitgebreide trend- en conceptontwikkeling'] },
+    { label:'Persoonlijke LinkedIn-posts voor Darwin', v:[null,'4 per maand','4 per maand'] },
+    { label:'Ruimte voor verschillende formats en medewerkers', v:[null,null,'Meer ruimte'] },
+    { label:'Maandelijks moment', v:['Afstemming','Evaluatie en optimalisatie','Analyse en optimalisatie'] },
+    { label:'Past bij', fit:true, v:[
+      ['Voor een sterke en consistente basis op social media.', "Geschikt wanneer McDonald's Nederweert social media eerst op een toegankelijke manier wil opbouwen."],
+      ['Genoeg ritme om serieus te bouwen aan bereik, recruitment en employer branding.', ''],
+      ['Voor wanneer je echt maximaal wilt inzetten op lokale zichtbaarheid.', "Vooral geschikt wanneer McDonald's Nederweert veel verschillende formats wil testen en elke week meerdere keren zichtbaar wil zijn."]
+    ] },
+    { label:'Investering per maand', price:true, v:[P.basis,P.groei,P.max] }
+  ];
+  const meterHTML = n => '<span class="meter" aria-hidden="true">' + Array.from({length:6},(_,i)=>`<i${i<n?' class="on"':''}></i>`).join('') + '</span>';
+  const cell = (row, i) => {
+    const x = row.v[i];
+    if (x === null) return '<span class="no" aria-label="Niet in dit pakket">–</span>';
+    if (row.price) return `<span class="num">€${fmt(x)}</span>`;
+    if (row.num) return `<span class="num">${x}</span>`;
+    if (row.fit) return `<span class="fit">${x[0]}${x[1] ? `<small>${x[1]}</small>` : ''}</span>`;
+    return x;
+  };
+  const ctaHTML = (k, cls) => `<a class="btn ${cls}" href="${d.querySelector('[data-cta="'+k+'"]').href}">${k==='groei'?'Start met Pakket Groei':k==='basis'?'Bespreek Basis':'Bespreek Maximaal'}</a>`;
+  // desktop: kolommen
+  let t = '<div class="h"></div>' + PK.map(p => `<div class="h${p.key==='groei'?' g':''}">${p.key==='groei'?'<span class="tag">Ons advies</span>':''}<b>${p.name}</b><span class="lvl">${meterHTML(p.n)}${p.level}</span></div>`).join('');
+  DIFFS.forEach(r => { t += `<div class="lab">${r.label}</div>` + PK.map((p,i) => `<div class="${p.key==='groei'?'g':''}">${cell(r,i)}</div>`).join(''); });
+  t += '<div class="ctacell lab"></div>' + PK.map(p => `<div class="ctacell${p.key==='groei'?' g':''}">${ctaHTML(p.key, p.key==='groei'?'':'btn--ghost')}</div>`).join('');
+  d.getElementById('cmpTable').innerHTML = t;
+  // mobiel: per verschil een kaart
+  let m = DIFFS.map(r => `<div class="dm-row"><b>${r.label}</b>` + PK.map((p,i) => `<div class="it${p.key==='groei'?' g':''}"><span class="pk">${p.key==='max'?'Maximaal':p.name}<small>${p.level}</small></span><span>${cell(r,i)}</span></div>`).join('') + '</div>').join('');
+  m += '<div class="dm-cta">' + ctaHTML('groei','') + ctaHTML('basis','btn--ghost') + ctaHTML('max','btn--ghost') + '</div>';
+  d.getElementById('cmpMobile').innerHTML = m;
+
+  const dlg = d.getElementById('cmpDialog');
+  let lastFocus = null;
+  function openCmp(){
+    lastFocus = d.activeElement;
+    root.classList.add('dlg-lock');
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+    dlg.querySelector('.dlg-in').scrollTop = 0;
+    dlg.querySelector('.dlg-x').focus();
+  }
+  function closeCmp(){ if (dlg.close) dlg.close(); else { dlg.removeAttribute('open'); onClose(); } }
+  function onClose(){ root.classList.remove('dlg-lock'); if (lastFocus) lastFocus.focus(); }
+  dlg.addEventListener('close', onClose);
+  d.querySelectorAll('[data-open-cmp]').forEach(b => b.addEventListener('click', openCmp));
+  dlg.querySelectorAll('[data-close-cmp]').forEach(b => b.addEventListener('click', closeCmp));
+  dlg.addEventListener('click', e => { if (e.target === dlg) closeCmp(); });
+
   // Ritme-kalender
   const cal = d.getElementById('cal');
   const days = ['ma','di','wo','do','vr','za','zo'];
@@ -1314,16 +1419,16 @@ const CONFIG = {
   }
   cal.innerHTML = html;
   const rhythm = {
-    basis: { v:[2], p:[4], txt:'8 contactmomenten per maand op TikTok en Instagram' },
-    groei: { v:[1,4], p:[2], txt:'12 contactmomenten per maand, plus 4 LinkedIn-posts van Darwin' },
-    max:   { v:[0,2,4], p:[5], txt:'16 contactmomenten per maand, plus 4 LinkedIn-posts van Darwin' }
+    basis: { v:[2], p:[4], pw:[0], txt:'5 contactmomenten per maand op TikTok en Instagram' },
+    groei: { v:[1,4], p:[2], pw:[0,1,2,3], txt:'12 contactmomenten per maand, plus 4 LinkedIn-posts van Darwin' },
+    max:   { v:[0,2,4], p:[5], pw:[0,1,2,3], txt:'16 contactmomenten per maand, plus 4 LinkedIn-posts van Darwin' }
   };
   const rNum = d.getElementById('ritmeNum'), rTxt = d.getElementById('ritmeTxt');
   function setRhythm(k){
     const r = rhythm[k]; let c = 0;
     cal.querySelectorAll('.d').forEach(el => {
       const dd = +el.dataset.day, w = +el.dataset.w;
-      const hv = r.v.includes(dd), hp = r.p.includes(dd);
+      const hv = r.v.includes(dd), hp = r.p.includes(dd) && r.pw.includes(w);
       el.querySelector('.v').style.transitionDelay = el.querySelector('.p').style.transitionDelay = (w*.08 + dd*.03) + 's';
       el.classList.toggle('hv', hv); el.classList.toggle('hp', hp);
       c += (hv?1:0) + (hp?1:0);
